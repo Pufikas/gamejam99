@@ -1,0 +1,29 @@
+[gd_scene format=3 uid="uid://b776rbyhwhj4p"]
+
+[ext_resource type="Script" uid="uid://xetu4xnachbd" path="res://scripts/dialogue_panel.gd" id="1_1q4rp"]
+
+[node name="DialoguePanel" type="Control" unique_id=199624025]
+layout_mode = 3
+anchors_preset = 0
+script = ExtResource("1_1q4rp")
+
+[node name="Speaker" type="Label" parent="." unique_id=1083725540]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+text = "Fairy"
+
+[node name="Dialogue" type="Label" parent="." unique_id=170708246]
+layout_mode = 0
+offset_top = 23.0
+offset_right = 481.0
+offset_bottom = 46.0
+text = "Welcome, I guess. What personal failing are we frosting today?"
+
+[node name="Continue" type="Button" parent="." unique_id=1544782088]
+layout_mode = 0
+offset_left = 395.0
+offset_top = 106.0
+offset_right = 478.0
+offset_bottom = 137.0
+text = "Continue "

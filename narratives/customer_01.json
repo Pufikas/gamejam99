@@ -1,0 +1,30 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Welcome, I guess. What personal failing are we frosting today?"
+		},
+		{
+			"speaker": "Customer",
+			"text": "I want my sister’s husband to fall in love with me."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Uh-huh. I’ll throw in a conscience. Yours appears to be missing."
+		}
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Would you like a bag for the cake? And another for your shame?"
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Wrong cake. Though trying someone else’s seems to be your thing."
+		}
+	]
+}

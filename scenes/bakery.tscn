@@ -1,0 +1,34 @@
+[gd_scene format=3 uid="uid://bqkxxkes6f5kn"]
+
+[ext_resource type="Script" uid="uid://64cb7tm7fef" path="res://scripts/bakery.gd" id="1_lcg4g"]
+[ext_resource type="Texture2D" uid="uid://c7xw272xf1odr" path="res://icon.svg" id="2_execi"]
+[ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
+[ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
+[ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
+[ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
+
+[node name="Bakery" type="Node2D" unique_id=1580627570]
+script = ExtResource("1_lcg4g")
+
+[node name="Stall" type="Sprite2D" parent="." unique_id=4041187]
+position = Vector2(605.00006, 548)
+scale = Vector2(4.9375, 1.3164059)
+texture = ExtResource("2_execi")
+
+[node name="Customer" parent="." unique_id=54226093 instance=ExtResource("3_d2ae8")]
+position = Vector2(529, 379)
+
+[node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("2_hpt4t")]
+position = Vector2(652, 458)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958973872]
+
+[node name="DialoguePanel" parent="CanvasLayer" unique_id=1642290809 instance=ExtResource("5_gfx47")]
+offset_left = 339.0
+offset_top = 153.0
+offset_right = 339.0
+offset_bottom = 153.0
+
+[node name="DialogueManager" type="Node2D" parent="CanvasLayer" unique_id=1786899867]
+unique_name_in_owner = true
+script = ExtResource("6_d2ae8")

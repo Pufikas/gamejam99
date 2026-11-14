@@ -11,6 +11,7 @@ config_version=5
 [application]
 
 config/name="gamejam99"
+run/main_scene="uid://bqkxxkes6f5kn"
 config/features=PackedStringArray("4.7", "Forward Plus")
 config/icon="res://icon.svg"
 
@@ -22,6 +23,16 @@ window/stretch/aspect="expand"
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")
+
+[file_customization]
+
+folder_colors={
+"res://assets/": "green",
+"res://components/": "orange",
+"res://narratives/": "pink",
+"res://scenes/": "blue",
+"res://scripts/": "red"
+}
 
 [physics]
 
