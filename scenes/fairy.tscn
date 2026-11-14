@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cfsrfy7efauky"]
+
+[ext_resource type="Texture2D" uid="uid://c7xw272xf1odr" path="res://icon.svg" id="1_qs0wo"]
+
+[node name="Fairy" type="Node2D" unique_id=1505864144]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1285568132]
+position = Vector2(0, -3.8146973e-06)
+scale = Vector2(0.484375, 0.4375)
+texture = ExtResource("1_qs0wo")
