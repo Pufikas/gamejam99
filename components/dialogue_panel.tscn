@@ -1,29 +1,51 @@
 [gd_scene format=3 uid="uid://b776rbyhwhj4p"]
 
 [ext_resource type="Script" uid="uid://xetu4xnachbd" path="res://scripts/dialogue_panel.gd" id="1_1q4rp"]
+[ext_resource type="Texture2D" uid="uid://bx5slmh7mqnbt" path="res://assets/ui/dialogue box.png" id="2_x5xss"]
 
 [node name="DialoguePanel" type="Control" unique_id=199624025]
 layout_mode = 3
 anchors_preset = 0
 script = ExtResource("1_1q4rp")
+metadata/_edit_use_anchors_ = true
 
-[node name="Speaker" type="Label" parent="." unique_id=1083725540]
-layout_mode = 0
-offset_right = 40.0
-offset_bottom = 23.0
+[node name="TextureRect" type="TextureRect" parent="." unique_id=444612087]
+layout_mode = 1
+offset_right = 752.0
+offset_bottom = 167.0
+texture = ExtResource("2_x5xss")
+metadata/_edit_use_anchors_ = true
+
+[node name="Speaker" type="Label" parent="TextureRect" unique_id=1083725540]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.86702126
+anchor_top = 0.20958084
+anchor_right = 0.92021275
+anchor_bottom = 0.3473054
+grow_horizontal = 0
 text = "Fairy"
+metadata/_edit_use_anchors_ = true
 
-[node name="Dialogue" type="Label" parent="." unique_id=170708246]
-layout_mode = 0
-offset_top = 23.0
-offset_right = 481.0
-offset_bottom = 46.0
+[node name="Dialogue" type="Label" parent="TextureRect" unique_id=170708246]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06382979
+anchor_top = 0.4790419
+anchor_right = 0.7034575
+anchor_bottom = 0.61676645
+grow_vertical = 2
 text = "Welcome, I guess. What personal failing are we frosting today?"
+metadata/_edit_use_anchors_ = true
 
-[node name="Continue" type="Button" parent="." unique_id=1544782088]
-layout_mode = 0
-offset_left = 395.0
-offset_top = 106.0
-offset_right = 478.0
-offset_bottom = 137.0
+[node name="Continue" type="Button" parent="TextureRect" unique_id=1544782088]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.84175533
+anchor_top = 0.7005988
+anchor_right = 0.95212764
+anchor_bottom = 0.88622755
+grow_horizontal = 0
+grow_vertical = 0
 text = "Continue "
+metadata/_edit_use_anchors_ = true
