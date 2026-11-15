@@ -54,4 +54,4 @@ unique_name_in_owner = true
 script = ExtResource("6_d2ae8")
 
 [node name="IngredientsPanel" parent="." unique_id=1833970287 instance=ExtResource("9_gg4h7")]
-position = Vector2(645, 253)
+position = Vector2(657, 151)
