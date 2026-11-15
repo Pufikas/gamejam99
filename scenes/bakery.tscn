@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
+[ext_resource type="PackedScene" uid="uid://kydc2nxl6u3x" path="res://components/ingredient.tscn" id="5_roruw"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
+[ext_resource type="Texture2D" uid="uid://dji6e8uw5uxan" path="res://assets/ingredients/swamp_onion.png" id="6_roruw"]
 
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
@@ -20,6 +22,13 @@ position = Vector2(529, 379)
 
 [node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("2_hpt4t")]
 position = Vector2(652, 458)
+
+[node name="Ingredient" parent="." unique_id=97654744 instance=ExtResource("5_roruw")]
+offset_left = 30.0
+offset_top = 22.0
+offset_right = 94.0
+offset_bottom = 86.0
+sprite = ExtResource("6_roruw")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958973872]
 

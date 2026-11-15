@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://kydc2nxl6u3x"]
+
+[ext_resource type="Script" uid="uid://dklmjr6mond5b" path="res://scripts/ingredient.gd" id="1_jr3rn"]
+[ext_resource type="Texture2D" uid="uid://dji6e8uw5uxan" path="res://assets/ingredients/swamp_onion.png" id="2_4dj07"]
+
+[node name="Ingredient" type="PanelContainer" unique_id=97654744]
+custom_minimum_size = Vector2(64, 64)
+script = ExtResource("1_jr3rn")
+
+[node name="Control" type="Control" parent="." unique_id=405268005]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Control" unique_id=823544115]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_right = 54.0
+offset_bottom = 23.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Temp"
+
+[node name="Description" type="Label" parent="Control" unique_id=1833737355]
+unique_name_in_owner = true
+visible = false
+custom_minimum_size = Vector2(120, 20)
+layout_mode = 0
+offset_left = 64.0
+offset_top = 1.0
+offset_right = 184.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 10
+text = "A very long description with a decently lenghtly words"
+autowrap_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=87968641]
+layout_mode = 2
+texture = ExtResource("2_4dj07")
+expand_mode = 1
+
+[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
+[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
