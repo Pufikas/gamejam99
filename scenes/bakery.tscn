@@ -1,13 +1,8 @@
 [gd_scene format=3 uid="uid://bqkxxkes6f5kn"]
 
 [ext_resource type="Script" uid="uid://64cb7tm7fef" path="res://scripts/bakery.gd" id="1_lcg4g"]
-<<<<<<< HEAD
-[ext_resource type="Texture2D" uid="uid://c7xw272xf1odr" path="res://icon.svg" id="2_execi"]
-[ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
-=======
 [ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
->>>>>>> e60402f (Imported default scene from Pufikas branch, added ingredients assets and cart asset)
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
@@ -17,14 +12,8 @@
 script = ExtResource("1_lcg4g")
 
 [node name="Stall" type="Sprite2D" parent="." unique_id=4041187]
-<<<<<<< HEAD
-position = Vector2(605.00006, 548)
-scale = Vector2(4.9375, 1.3164059)
-texture = ExtResource("2_execi")
-=======
 position = Vector2(550, 324)
 texture = ExtResource("2_roruw")
->>>>>>> e60402f (Imported default scene from Pufikas branch, added ingredients assets and cart asset)
 
 [node name="Customer" parent="." unique_id=54226093 instance=ExtResource("3_d2ae8")]
 position = Vector2(195, 471)
