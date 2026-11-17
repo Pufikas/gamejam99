@@ -5,6 +5,7 @@
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
+[ext_resource type="PackedScene" uid="uid://kydc2nxl6u3x" path="res://components/ingredient.tscn" id="5_roruw"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
 [ext_resource type="PackedScene" uid="uid://b7fum8u3nsex0" path="res://components/ingredients_panel.tscn" id="9_gg4h7"]
 
