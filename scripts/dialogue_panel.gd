@@ -2,9 +2,9 @@ extends Control
 
 signal next_dialogue
 
-@onready var speaker : Label = $Speaker
-@onready var dialogue : Label = $Dialogue
-@onready var continue_btn : Button = $Continue
+@onready var speaker : Label = $TextureRect/Speaker
+@onready var dialogue : Label = $TextureRect/Dialogue
+@onready var continue_btn : Button = $TextureRect/Continue
 
 func _ready() -> void:
 	continue_btn.pressed.connect(_on_continue_pressed)
