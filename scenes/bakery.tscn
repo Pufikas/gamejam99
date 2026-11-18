@@ -4,6 +4,8 @@
 [ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
+[ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="3_i37qs"]
+[ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="4_dqu5t"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
 [ext_resource type="PackedScene" uid="uid://kydc2nxl6u3x" path="res://components/ingredient.tscn" id="5_roruw"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
@@ -16,6 +18,12 @@ script = ExtResource("1_lcg4g")
 [node name="Stall" type="Sprite2D" parent="." unique_id=4041187]
 position = Vector2(550, 324)
 texture = ExtResource("2_roruw")
+
+[node name="Plate" type="Sprite2D" parent="Stall" unique_id=1323940219]
+position = Vector2(-192, -15)
+texture = ExtResource("3_i37qs")
+
+[node name="Cake" parent="Stall/Plate" unique_id=540244130 instance=ExtResource("4_dqu5t")]
 
 [node name="Customer" parent="." unique_id=54226093 instance=ExtResource("3_d2ae8")]
 position = Vector2(195, 471)
