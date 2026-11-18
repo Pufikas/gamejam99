@@ -1,9 +1,11 @@
-[gd_scene format=3 uid="uid://bqkxxkes6f5kn"]
+[gd_scene format=3 uid="uid://c2har7k4l8nae"]
 
 [ext_resource type="Script" uid="uid://64cb7tm7fef" path="res://scripts/bakery.gd" id="1_lcg4g"]
 [ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
+[ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="3_i37qs"]
+[ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="4_dqu5t"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
 [ext_resource type="PackedScene" uid="uid://dgbubht77hggb" path="res://components/cake_combination_area.tscn" id="8_roruw"]
@@ -38,14 +40,20 @@ script = ExtResource("6_d2ae8")
 position = Vector2(657, 151)
 
 [node name="CakeCombinationArea" parent="." unique_id=1872399338 instance=ExtResource("8_roruw")]
-offset_left = 375.0
-offset_top = 310.0
-offset_right = 412.0
-offset_bottom = 349.0
+offset_left = 360.0
+offset_top = 269.0
+offset_right = 428.0
+offset_bottom = 308.0
 
 [node name="Label" type="Label" parent="." unique_id=1964600770]
-offset_left = 255.0
-offset_top = 279.0
-offset_right = 607.0
-offset_bottom = 302.0
+offset_left = 232.0
+offset_top = 206.0
+offset_right = 584.0
+offset_bottom = 229.0
 text = "(remove) this is the zone for the combination "
+
+[node name="Plate" type="Sprite2D" parent="." unique_id=588496257]
+position = Vector2(394, 307)
+texture = ExtResource("3_i37qs")
+
+[node name="Cake" parent="Plate" unique_id=540244130 instance=ExtResource("4_dqu5t")]

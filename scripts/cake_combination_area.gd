@@ -8,6 +8,8 @@ extends PanelContainer
 var selected_ingredients : Array[Dictionary] = []
 
 signal cake_created(recipe : Dictionary)
+signal ingredient_applied(ingredient : Variant)
+signal clear_cake_sprites()
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	return data is Dictionary and selected_ingredients.size() < 2
@@ -22,6 +24,8 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 		second_item.texture = data["texture"]
 		button.show()
 		print("[DEBUG] Combine ready")
+	
+	ingredient_applied.emit(data)
 	
 func get_recipe() -> Dictionary:
 	var id_one = String(selected_ingredients[0]["id"])
@@ -40,6 +44,7 @@ func _clear_combinations() -> void:
 	
 	button.hide()
 	selected_ingredients.clear()
+	clear_cake_sprites.emit() # emit so cake can clear the sprites off
 
 func _on_button_pressed() -> void:
 	var recipe = get_recipe()
