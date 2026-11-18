@@ -1,3 +1,5 @@
 [gd_scene format=3 uid="uid://8epr18tyo8wa"]
 
 [node name="Cake" type="Node2D" unique_id=540244130]
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=614524173]

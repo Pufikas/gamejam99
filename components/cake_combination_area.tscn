@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://dgbubht77hggb"]
+
+[ext_resource type="Script" uid="uid://c2x7h5j0f3722" path="res://scripts/cake_combination_area.gd" id="1_x3uy5"]
+
+[node name="CakeCombinationArea" type="PanelContainer" unique_id=1872399338]
+offset_left = 2.0
+offset_top = 1.0
+offset_right = 70.0
+offset_bottom = 68.0
+script = ExtResource("1_x3uy5")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1369759171]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="VBoxContainer" unique_id=4412862]
+layout_mode = 2
+
+[node name="FirstItem" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1475672120]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="SecondItem" type="TextureRect" parent="VBoxContainer/HBoxContainer" unique_id=1234396071]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(32, 32)
+custom_maximum_size = Vector2(32, 32)
+layout_mode = 2
+mouse_filter = 2
+
+[node name="ResultCake" type="TextureRect" parent="VBoxContainer" unique_id=1989180351]
+layout_mode = 2
+
+[node name="Button" type="Button" parent="VBoxContainer" unique_id=1192235656]
+visible = false
+layout_mode = 2
+text = "Mix"
+
+[connection signal="pressed" from="VBoxContainer/Button" to="." method="_on_button_pressed"]
