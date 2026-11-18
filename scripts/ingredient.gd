@@ -13,10 +13,23 @@ func _ready() -> void:
 	label_text.text = ing_name
 	label_description.text = description
 
-
 func _on_mouse_entered() -> void:
 	label_description.show()
 
-
 func _on_mouse_exited() -> void:
 	label_description.hide()
+
+func _get_drag_data(_at_position: Vector2) -> Variant:
+	var p = TextureRect.new() # preview when dragging
+	p.texture = sprite
+	p.custom_minimum_size = Vector2(64, 64)
+	p.expand_mode = TextureRect.EXPAND_IGNORE_SIZE
+	p.stretch_mode = TextureRect.STRETCH_KEEP_ASPECT_CENTERED
+	
+	set_drag_preview(p)
+	
+	return {
+		"id": ing_name.to_snake_case(),
+		"name": ing_name,
+		"texture": sprite
+	}
