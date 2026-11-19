@@ -1,33 +1,27 @@
 extends PanelContainer
 
-@onready var first_item : TextureRect = %FirstItem
-@onready var second_item : TextureRect = %SecondItem
-@onready var result_cake : TextureRect = $VBoxContainer/ResultCake
-@onready var button : Button = $VBoxContainer/Button
-
 var selected_ingredients : Array[Dictionary] = []
 
 signal cake_created(recipe : Dictionary)
-signal ingredient_applied(ingredient : Variant)
+signal ingredient_applied(ingredient : Dictionary)
+signal ingredients_changed(count: int)
 signal clear_cake_sprites()
 
+
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
-	return data is Dictionary and selected_ingredients.size() < 2
+	return selected_ingredients.size() < 2
 
 func _drop_data(_at_position: Vector2, data: Variant) -> void:
 	selected_ingredients.append(data)
-	
-	if selected_ingredients.size() == 1:
-		first_item.texture = data["texture"]
-	
-	elif selected_ingredients.size() == 2:
-		second_item.texture = data["texture"]
-		button.show()
-		print("[DEBUG] Combine ready")
-	
+
+	print("[DEBUG] Added ingredient: ", data["name"])
 	ingredient_applied.emit(data)
+	ingredients_changed.emit(selected_ingredients.size())
 	
 func get_recipe() -> Dictionary:
+	if selected_ingredients.size() != 2:
+		return {}
+		
 	var id_one = String(selected_ingredients[0]["id"])
 	var id_two = String(selected_ingredients[1]["id"])
 	
@@ -38,25 +32,23 @@ func get_recipe() -> Dictionary:
 	print("[DEBUG] recipe_key: ", recipe_key)
 	return RecipeBook.RECIPES.get(recipe_key, {})
 
-func _clear_combinations() -> void:
-	first_item.texture = null
-	second_item.texture = null
-	
-	button.hide()
+func clear_combinations() -> void:
 	selected_ingredients.clear()
 	clear_cake_sprites.emit() # emit so cake can clear the sprites off
+	ingredients_changed.emit(0)
 
-func _on_button_pressed() -> void:
+func create_cake() -> void:
+	if selected_ingredients.size() != 2:
+		return
+		
 	var recipe = get_recipe()
-	
 	# couldnt find that combination, so just remove and (TODO) emit a dialogue for a fairy saying something
 	if recipe.is_empty():
-		print("What kind of combination is that?")
-		_clear_combinations()
+		print("[DEBUG] Invalid combination")
+		clear_combinations()
 		return
 	
 	print("[DEBUG] Combination: ", recipe)
 	
 	cake_created.emit(recipe)
-	
-	_clear_combinations()
+	clear_combinations()
