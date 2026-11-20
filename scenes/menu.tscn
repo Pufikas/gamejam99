@@ -1,5 +1,6 @@
 [gd_scene format=3 uid="uid://n8dj51jq1wjw"]
 
+[ext_resource type="Script" uid="uid://8xh50vccsx3s" path="res://scripts/menu.gd" id="1_con2f"]
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="1_vjb58"]
 [ext_resource type="Texture2D" uid="uid://bpqfxp1id6wdx" path="res://assets/cart/ingredient case.png" id="2_con2f"]
 
@@ -21,10 +22,17 @@ bg_color = Color(0.73414713, 1.4487356e-05, 0.4808668, 1)
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g3eks"]
 bg_color = Color(0.9647059, 0.4117647, 0.7372549, 1)
 
-[node name="Menu" type="Node2D" unique_id=593703334]
-position = Vector2(346, 262)
+[node name="Menu" type="Control" unique_id=1613922600]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 346.0
+offset_top = 262.0
+offset_right = 346.0
+offset_bottom = 262.0
+script = ExtResource("1_con2f")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1624302366]
+layout_mode = 0
 offset_left = -343.0
 offset_top = -262.0
 offset_right = 808.0
@@ -39,6 +47,7 @@ position = Vector2(869, 286)
 texture = ExtResource("2_con2f")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1966798720]
+layout_mode = 0
 offset_left = 373.0
 offset_top = -48.0
 offset_right = 681.0
