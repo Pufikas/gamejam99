@@ -55,6 +55,35 @@ scale = Vector2(9.898881, 5.7587643)
 
 [node name="UI" type="Node" parent="." unique_id=833427010]
 
+[node name="IngredientInfo" type="Control" parent="UI" unique_id=511917445]
+layout_mode = 3
+anchors_preset = 0
+offset_top = 142.0
+offset_bottom = 142.0
+
+[node name="IngredientLabel" type="Label" parent="UI/IngredientInfo" unique_id=447727503]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 10.0
+offset_top = -25.0
+offset_right = 54.0
+offset_bottom = -2.0
+size_flags_horizontal = 4
+size_flags_vertical = 0
+text = "Temp"
+
+[node name="IngredientDescription" type="Label" parent="UI/IngredientInfo" unique_id=1169376077]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(80, 26)
+layout_mode = 0
+offset_left = 17.0
+offset_top = 1.0
+offset_right = 137.0
+offset_bottom = 232.0
+theme_override_font_sizes/font_size = 10
+text = "A very long description with a decently lenghtly words"
+autowrap_mode = 2
+
 [node name="CakeButtons" type="Control" parent="UI" unique_id=469045232]
 layout_mode = 3
 anchors_preset = 0

@@ -7,6 +7,7 @@
 
 [node name="Customer" type="Node2D" unique_id=54226093]
 script = ExtResource("1_xss0h")
+dialogue_file = "res://narratives/customer_1.json"
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2000638084]
 texture = ExtResource("2_8qg4y")

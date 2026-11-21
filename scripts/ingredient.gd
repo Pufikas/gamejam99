@@ -1,3 +1,4 @@
+class_name IngredientPanel
 extends PanelContainer
 
 @export var ing_name : String = "Temp"
@@ -8,16 +9,18 @@ extends PanelContainer
 @onready var label_text : Label = %Label
 @onready var label_description : Label = %Description
 
+signal ingredient_hover(ing_name : String, description : String)
+
 func _ready() -> void:
 	texture_rect.texture = sprite
 	label_text.text = ing_name
 	label_description.text = description
 
 func _on_mouse_entered() -> void:
-	label_description.show()
+	ingredient_hover.emit(ing_name, description)
 
 func _on_mouse_exited() -> void:
-	label_description.hide()
+	ingredient_hover.emit("", "")
 
 func _get_drag_data(_at_position: Vector2) -> Variant:
 	var p = TextureRect.new() # preview when dragging

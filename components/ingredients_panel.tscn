@@ -76,10 +76,11 @@ sprite = ExtResource("5_0iuxh")
 [node name="MirrorGlaze" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=832843012 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
 ing_name = "Mirror Glaze"
-description = "Mirror, mirrorDon’t stare too longEverything’s doubledYou might see something wrong"
+description = "Mirror, mirror Don’t stare too long Everything’s doubled You might see something wrong"
 sprite = ExtResource("6_6jvvf")
 
 [node name="Onion" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1575308956 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
 ing_name = "Onion"
+description = "Has layers like a parfait, but makes you cry. Peel back layers at your own risk."
 sprite = ExtResource("2_0iuxh")
