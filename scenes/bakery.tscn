@@ -11,6 +11,8 @@
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
 [ext_resource type="Texture2D" uid="uid://dji6e8uw5uxan" path="res://assets/ingredients/swamp_onion.png" id="6_roruw"]
 [ext_resource type="PackedScene" uid="uid://b7fum8u3nsex0" path="res://components/ingredients_panel.tscn" id="9_gg4h7"]
+[ext_resource type="Texture2D" uid="uid://8nhfexokpe0t" path="res://assets/backdrop/backdrop.png" id="12_20d28"]
+[ext_resource type="Texture2D" uid="uid://6vhbrwlww5nr" path="res://assets/cart/cart wheel.png" id="13_s1llo"]
 
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
@@ -29,7 +31,8 @@ texture = ExtResource("3_i37qs")
 position = Vector2(195, 471)
 
 [node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("2_hpt4t")]
-position = Vector2(572, 347)
+z_index = 1
+position = Vector2(565, 280)
 
 [node name="Ingredient" parent="." unique_id=97654744 instance=ExtResource("5_roruw")]
 offset_left = 30.0
@@ -52,3 +55,13 @@ script = ExtResource("6_d2ae8")
 
 [node name="IngredientsPanel" parent="." unique_id=1833970287 instance=ExtResource("9_gg4h7")]
 position = Vector2(657, 151)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1808023923]
+z_index = -1
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("12_20d28")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1889229727]
+position = Vector2(1015, 716)
+texture = ExtResource("13_s1llo")
