@@ -21,7 +21,7 @@
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
 customer_scene = ExtResource("3_d2ae8")
-customer_list = Array[ExtResource("3_20d28")]([ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2")])
+customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
 anchors_preset = 8

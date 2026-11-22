@@ -9,7 +9,7 @@ var current_music : int = -1
 
 func _ready() -> void:
 	music_player.finished.connect(_on_music_finished)
-	music_player.volume_db = -40.0
+	music_player.volume_db = -30.0
 	sfx_player.volume_db = -20.0
 
 func _on_music_finished() -> void:
