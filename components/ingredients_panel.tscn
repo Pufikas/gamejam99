@@ -49,9 +49,9 @@ theme_override_constants/v_separation = 25
 columns = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="CandyRose" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=97654744 instance=ExtResource("2_6jvvf")]
+[node name="CandiedRose" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=97654744 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
-ing_name = "Candy Rose"
+ing_name = "Candied Rose"
 description = "Love, attraction, and desire are three very different things. These petals can produce all three."
 sprite = ExtResource("4_6jvvf")
 
@@ -76,10 +76,11 @@ sprite = ExtResource("5_0iuxh")
 [node name="MirrorGlaze" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=832843012 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
 ing_name = "Mirror Glaze"
-description = "Mirror, mirrorDon’t stare too longEverything’s doubledYou might see something wrong"
+description = "Mirror, mirror Don’t stare too long Everything’s doubled You might see something wrong"
 sprite = ExtResource("6_6jvvf")
 
 [node name="Onion" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1575308956 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
 ing_name = "Onion"
+description = "Has layers like a parfait, but makes you cry. Peel back layers at your own risk."
 sprite = ExtResource("2_0iuxh")

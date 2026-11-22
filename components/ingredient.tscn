@@ -3,16 +3,19 @@
 [ext_resource type="Script" uid="uid://dklmjr6mond5b" path="res://scripts/ingredient.gd" id="1_jr3rn"]
 
 [node name="Ingredient" type="PanelContainer" unique_id=97654744]
+self_modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(90, 90)
 offset_right = 64.0
 offset_bottom = 64.0
 script = ExtResource("1_jr3rn")
 
 [node name="Control" type="Control" parent="." unique_id=405268005]
+visible = false
 layout_mode = 2
 
 [node name="Label" type="Label" parent="Control" unique_id=823544115]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = 10.0
 offset_right = 54.0

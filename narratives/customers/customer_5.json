@@ -1,0 +1,38 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Oh, come on. I’ve only just sat down."
+		},
+		{
+			"speaker": "Customer",
+			"text": "My wife keeps reminding me about the chores, and I’d rather she didn’t.  I need a cake that gets things done."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Join the club, buttercup. Is this our first meeting? Yippee!"
+		}
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Tell your wife I’m sorry."
+		},
+		{
+			"speaker": "Customer",
+			"text": "For what?"
+		},
+		{
+			"speaker": "Fairy",
+			"text": "I’ve only dealt with you for five minutes. She married you."
+		},
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Is this weaponized incompetence? That doesn’t work on me. I invented it."
+		}
+	],
+}
