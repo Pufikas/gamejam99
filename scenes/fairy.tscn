@@ -1,10 +1,79 @@
 [gd_scene format=3 uid="uid://cfsrfy7efauky"]
 
-[ext_resource type="Texture2D" uid="uid://c7xw272xf1odr" path="res://icon.svg" id="1_qs0wo"]
+[ext_resource type="Texture2D" uid="uid://cb2xr8vbojmj4" path="res://assets/fairy/b1.png" id="1_wuxss"]
+[ext_resource type="Texture2D" uid="uid://dagorwolo6cwc" path="res://assets/fairy/b2.png" id="2_0jn54"]
+[ext_resource type="Texture2D" uid="uid://xsm7us354a3u" path="res://assets/fairy/b4.png" id="3_60auo"]
+[ext_resource type="Texture2D" uid="uid://ceabiuhmluv45" path="res://assets/fairy/2.png" id="4_onrb3"]
+[ext_resource type="Texture2D" uid="uid://cscpow4yd0jan" path="res://assets/fairy/1.png" id="5_khp51"]
+[ext_resource type="Texture2D" uid="uid://dbkykvoiu5ep6" path="res://assets/fairy/3.png" id="6_qcx4o"]
+[ext_resource type="Texture2D" uid="uid://lipus6yom76i" path="res://assets/fairy/4.png" id="7_6od5w"]
+[ext_resource type="Texture2D" uid="uid://bs4rwi33l3xv0" path="res://assets/fairy/5.png" id="8_hes8j"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bhunq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_wuxss")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_0jn54")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_60auo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("1_wuxss")
+}],
+"loop": 0,
+"name": &"blink",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("4_onrb3")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 24.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_khp51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_onrb3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qcx4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6od5w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_hes8j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_qcx4o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_khp51")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_onrb3")
+}],
+"loop": 0,
+"name": &"wing flick",
+"speed": 24.0
+}]
 
 [node name="Fairy" type="Node2D" unique_id=1505864144]
+scale = Vector2(1.7, 1.9)
 
-[node name="Sprite2D" type="Sprite2D" parent="." unique_id=1285568132]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1473402346]
 position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.484375, 0.4375)
-texture = ExtResource("1_qs0wo")
+sprite_frames = SubResource("SpriteFrames_bhunq")
+animation = &"wing flick"
+autoplay = "idle"
+frame = 7
+frame_progress = 1.0
