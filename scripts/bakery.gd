@@ -1,6 +1,9 @@
 extends Node2D
 
-@onready var customer = $Customer
+@export var customer_scene : PackedScene
+@export var customer_list : Array[CustomerData]
+@onready var customer_container : Node2D = $CustomerContainer
+
 @onready var dialogue_manager = %DialogueManager
 @onready var cake : Node2D = $Plate/Cake
 @onready var cake_combination_area : PanelContainer = $CakeCombinationArea
@@ -11,9 +14,10 @@ extends Node2D
 @onready var ingredient_info : Control = $UI/IngredientInfo
 @onready var ingredients_panel : Node2D = $IngredientsPanel
 
+var customer : Node2D
+var curr_customer_index = 0
+
 func _ready() -> void:
-	customer.customer_clicked.connect(_on_customer_clicked)
-	
 	cake_combination_area.ingredients_changed.connect(_on_ingredients_changed)
 	cake_combination_area.ingredient_applied.connect(cake.toggle_sprite) # player drags an ingredient to the combination area
 	cake_combination_area.clear_cake_sprites.connect(cake.clear_cake)
@@ -24,7 +28,37 @@ func _ready() -> void:
 		ingredient.ingredient_hover.connect(_on_ingredient_hovered)
 	
 	_on_ingredients_changed(0)
+	spawn_customer()
+
+func spawn_customer():
+	if curr_customer_index >= customer_list.size():
+		print("No more customers!")
+		# game end
+		return
+	
+	var new_customer = customer_scene.instantiate()
+	
+	customer_container.add_child(new_customer)
+	new_customer.customer_clicked.connect(_on_customer_clicked)
+	new_customer.customer_left.connect(_on_customer_left)
+	
+	new_customer.setup(
+		customer_list[curr_customer_index],
+		curr_customer_index,
+		dialogue_manager # pass the reference where is the dialogue manager
+	)
+	
+	customer = new_customer
+	curr_customer_index += 1
+	
 	customer.enter_bakery()
+
+func _on_customer_left():
+	if customer:
+		customer.queue_free()
+	
+	customer = null
+	spawn_customer()
 
 func _on_ingredient_hovered(ing_name: String, description: String) -> void:
 	%IngredientLabel.text = ing_name
@@ -41,13 +75,15 @@ func _on_ingredients_changed(count: int) -> void:
 func _on_cake_served(recipe: Dictionary) -> void:
 	print("[DEBUG] (bakery) Cake created: ", recipe)
 	print("[DEBUG] Customer reference: ", customer)
+	if customer == null:
+		return
 	customer.receive_cake(recipe)
 
 func _on_customer_clicked() -> void:
 	if dialogue_manager.is_playing:
 		return
 	
-	dialogue_manager.start_dialogue(customer.dialogue_file)
+	dialogue_manager.start_dialogue(customer.get_dialogue_path(), "start")
 
 # calls functions inside the cake_combination_area script
 func _on_serve_pressed() -> void:

@@ -29,7 +29,9 @@ func get_recipe() -> Dictionary:
 	ids.sort()
 	
 	var recipe_key = ids[0] + "|" + ids[1]
-	#print("[DEBUG] recipe_key: ", recipe_key)
+
+	print("[DEBUG] Generated recipe key: ", recipe_key)
+	print("[DEBUG] Recipe exists: ", RecipeBook.RECIPES.has(recipe_key))
 	return RecipeBook.RECIPES.get(recipe_key, {})
 
 func clear_combinations() -> void:
@@ -42,14 +44,12 @@ func serve_cake() -> void:
 		return
 		
 	var recipe = get_recipe()
-	# couldnt find that combination, so just remove and (TODO) emit a dialogue for a fairy saying something
+	
 	if recipe.is_empty():
-		print("[DEBUG] Invalid combination")
+		#print("[DEBUG] Invalid combination")
 		cake_served.emit(recipe)
 		clear_combinations()
 		return
-	
-	print("[DEBUG] Combination: ", recipe)
 	
 	cake_served.emit(recipe)
 	clear_combinations()
