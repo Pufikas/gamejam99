@@ -84,6 +84,7 @@ offset_bottom = 38.0
 
 [node name="IngredientBackground" type="TextureRect" parent="UI/IngredientInfo" unique_id=1757434077]
 unique_name_in_owner = true
+visible = false
 layout_mode = 0
 offset_left = -7.0000305
 offset_top = 216.00003

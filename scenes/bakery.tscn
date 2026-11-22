@@ -5,7 +5,10 @@
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
 [ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="3_i37qs"]
 [ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="4_dqu5t"]
+[ext_resource type="Resource" uid="uid://bwcxrd7oy5xgt" path="res://resources/murderman.tres" id="4_s1llo"]
+[ext_resource type="Resource" uid="uid://ven7a4ve225l" path="res://resources/spousethief.tres" id="5_1wtg2"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
+[ext_resource type="Resource" uid="uid://cbc4jau13ncam" path="res://resources/weightloss.tres" id="6_0pi5m"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
 [ext_resource type="Texture2D" uid="uid://8nhfexokpe0t" path="res://assets/backdrop/backdrop.png" id="7_1wtg2"]
 [ext_resource type="PackedScene" uid="uid://dgbubht77hggb" path="res://components/cake_combination_area.tscn" id="8_roruw"]
@@ -15,6 +18,22 @@
 
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
+customer_scene = ExtResource("3_d2ae8")
+customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("4_s1llo"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("4_s1llo")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_1wtg2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
 anchors_preset = 8

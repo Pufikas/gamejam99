@@ -1,0 +1,17 @@
+[gd_scene format=3 uid="uid://clx5awy8d525t"]
+
+[ext_resource type="Script" uid="uid://d15x134pyym3h" path="res://scripts/audio_manager.gd" id="1_m6ggh"]
+[ext_resource type="AudioStream" uid="uid://ddfgycif7ufnm" path="res://assets/audio/Cake_overload.mp3" id="2_aoitu"]
+[ext_resource type="AudioStream" uid="uid://bldjxvbspga3n" path="res://assets/audio/Fairy_madness.mp3" id="3_njtn3"]
+[ext_resource type="AudioStream" uid="uid://b2bep1qljnt4b" path="res://assets/audio/The_bitter_end.mp3" id="4_kq7b2"]
+
+[node name="AudioManager" type="Node" unique_id=1215231590]
+script = ExtResource("1_m6ggh")
+music_tracks = Array[AudioStream]([ExtResource("2_aoitu"), ExtResource("3_njtn3"), ExtResource("4_kq7b2")])
+
+[node name="MusicPlayer" type="AudioStreamPlayer" parent="." unique_id=520240332]
+stream = ExtResource("3_njtn3")
+volume_db = -0.882
+
+[node name="SFXPlayer" type="AudioStreamPlayer" parent="." unique_id=1504340736]
+volume_db = -32.173

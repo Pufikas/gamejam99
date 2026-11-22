@@ -1,0 +1,42 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Nooo! I can’t need money this badly!"
+		},
+		{
+			"speaker": "Customer",
+			"text": "Why don’t you make yourself a cake that’ll make you rich?"
+		},
+		{
+			"speaker": "Fairy",
+			"text": "No thanks! I once wished for a sweet ride, and look what I got! But I’m sure whatever you want will go wonderfully, lamb."
+		},
+		{
+			"speaker": "Customer",
+			"text": "I need a cake that’ll “off” my neighbor."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "I’m afraid my “Final Farewell” cakes aren’t working, dear. I’ve sold six this week with your name on them."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Only joking… Six was an exaggeration."
+		},
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Now, that’s a cake to die for! …Okay, not my best work. The joke. The cake’s lethal."
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Well, that’ll certainly offend your neighbor, but not off them. Less jail time, though."
+		}
+	],
+}

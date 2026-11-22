@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomerData" format=3 uid="uid://bwcxrd7oy5xgt"]
+
+[ext_resource type="Texture2D" uid="uid://bb61h83np5msr" path="res://assets/customers/murderman.png" id="1_dpp7x"]
+[ext_resource type="Script" uid="uid://cbitb70v3yrl7" path="res://scripts/customer_resource.gd" id="2_hkipm"]
+
+[resource]
+script = ExtResource("2_hkipm")
+customer_name = "Murderman"
+customer_sprite = ExtResource("1_dpp7x")
+metadata/_custom_type_script = "uid://cbitb70v3yrl7"
