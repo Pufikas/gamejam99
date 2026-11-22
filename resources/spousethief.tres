@@ -1,0 +1,10 @@
+[gd_resource type="Resource" script_class="CustomerData" format=3 uid="uid://ven7a4ve225l"]
+
+[ext_resource type="Texture2D" uid="uid://d1py3lyiydvyp" path="res://assets/customers/spousethief.png" id="1_wi51u"]
+[ext_resource type="Script" uid="uid://cbitb70v3yrl7" path="res://scripts/customer_resource.gd" id="2_aq0an"]
+
+[resource]
+script = ExtResource("2_aq0an")
+customer_name = "Spousethief"
+customer_sprite = ExtResource("1_wi51u")
+metadata/_custom_type_script = "uid://cbitb70v3yrl7"

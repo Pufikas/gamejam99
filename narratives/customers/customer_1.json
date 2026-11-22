@@ -1,0 +1,30 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Hi, pumpkin. Please tell me you’re here to rob me."
+		},
+		{
+			"speaker": "Customer",
+			"text": "Um… no. I need a layer cake that will help me lose weight."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Of course you do. Want a bottle of wine to help you stop drinking as well?"
+		}
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "There. Personal training with frosting. I’m clearly not charging enough."
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "That one grants the baker’s wishes. Don’t eat that, sweetie. I’ve spent all morning wishing everyone would drop dead."
+		}
+	]
+}

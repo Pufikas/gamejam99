@@ -1,0 +1,34 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Welcome. You’ve just missed yourself in the window. Tragic."
+		},
+		{
+			"speaker": "Customer",
+			"text": "I need a cake that makes me the fairest in the land."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "How far are you willing to travel? I know an uninhabited island."
+		}
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "There. If a jealous queen offers you an apple, do try to resist, princess."
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Customer",
+			"text": "I can’t see myself eating that."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Shall I get you a mirror?"
+		}
+	],
+}

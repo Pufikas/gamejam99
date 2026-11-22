@@ -2,7 +2,7 @@ extends Node
 
 signal dialogue_finished
 
-@onready var dialogue_panel : Control = $"../DialoguePanel"
+@onready var dialogue_panel : Control = %DialoguePanel
 
 var dialogue_lines : Array = []
 var current_line : int = 0

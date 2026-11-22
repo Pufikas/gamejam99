@@ -4,6 +4,8 @@
 [ext_resource type="Texture2D" uid="uid://c7xw272xf1odr" path="res://icon.svg" id="2_8qg4y"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0e7h"]
+radius = 14.1723385
+height = 53.66467
 
 [node name="Customer" type="Node2D" unique_id=54226093]
 script = ExtResource("1_xss0h")
