@@ -1,42 +1,150 @@
 [gd_scene format=3 uid="uid://kydc2nxl6u3x"]
 
-[ext_resource type="Script" uid="uid://dklmjr6mond5b" path="res://scripts/ingredient.gd" id="1_jr3rn"]
+[ext_resource type="Script" uid="uid://64cb7tm7fef" path="res://scripts/bakery.gd" id="1_6anw1"]
+[ext_resource type="Texture2D" uid="uid://8nhfexokpe0t" path="res://assets/backdrop/backdrop.png" id="2_y4amo"]
+[ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="3_mn7ig"]
+[ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="4_j5qsn"]
+[ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_eqk5x"]
+[ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_874hf"]
+[ext_resource type="PackedScene" uid="uid://b7fum8u3nsex0" path="res://components/ingredients_panel.tscn" id="7_qkp0g"]
+[ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="8_2y5r8"]
+[ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="9_jxeeb"]
+[ext_resource type="PackedScene" uid="uid://dgbubht77hggb" path="res://components/cake_combination_area.tscn" id="10_50jlk"]
+[ext_resource type="Texture2D" uid="uid://bx5slmh7mqnbt" path="res://assets/ui/dialogue box.png" id="11_lrrp4"]
+[ext_resource type="PackedScene" path="res://scenes/audio_manager.tscn" id="12_d6vw7"]
 
-[node name="Ingredient" type="PanelContainer" unique_id=97654744]
-custom_minimum_size = Vector2(90, 90)
-offset_right = 64.0
-offset_bottom = 64.0
-script = ExtResource("1_jr3rn")
+[node name="Bakery" type="Node2D" unique_id=1580627570]
+script = ExtResource("1_6anw1")
 
-[node name="Control" type="Control" parent="." unique_id=405268005]
-layout_mode = 2
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("2_y4amo")
 
-[node name="Label" type="Label" parent="Control" unique_id=823544115]
+[node name="Stall" type="Sprite2D" parent="." unique_id=4041187]
+position = Vector2(550, 324)
+texture = ExtResource("3_mn7ig")
+
+[node name="CustomerContainer" type="Node2D" parent="." unique_id=12494524]
+z_index = 1
+position = Vector2(130, 510)
+
+[node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("4_j5qsn")]
+position = Vector2(581.00006, 280)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958973872]
+
+[node name="DialoguePanel" parent="CanvasLayer" unique_id=1642290809 instance=ExtResource("5_eqk5x")]
+unique_name_in_owner = true
+offset_left = 318.0
+offset_top = 469.0
+offset_right = 318.0
+offset_bottom = 469.0
+
+[node name="DialogueManager" type="Node2D" parent="CanvasLayer" unique_id=1786899867]
+unique_name_in_owner = true
+script = ExtResource("6_874hf")
+
+[node name="IngredientsPanel" parent="." unique_id=1833970287 instance=ExtResource("7_qkp0g")]
+position = Vector2(657, 151)
+
+[node name="Plate" type="Sprite2D" parent="." unique_id=588496257]
+position = Vector2(410, 307)
+texture = ExtResource("8_2y5r8")
+
+[node name="Cake" parent="Plate" unique_id=540244130 instance=ExtResource("9_jxeeb")]
+
+[node name="CakeCombinationArea" parent="." unique_id=1872399338 instance=ExtResource("10_50jlk")]
+custom_minimum_size = Vector2(22, 22)
+offset_left = 305.0
+offset_top = 247.0
+offset_right = 327.0
+offset_bottom = 269.0
+scale = Vector2(9.898881, 5.7587643)
+
+[node name="UI" type="Node" parent="." unique_id=833427010]
+
+[node name="IngredientInfo" type="Control" parent="UI" unique_id=511917445]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 5.0
+offset_bottom = 38.0
+
+[node name="IngredientBackground" type="TextureRect" parent="UI/IngredientInfo" unique_id=1757434077]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 10.0
-offset_right = 54.0
-offset_bottom = 23.0
+offset_left = -7.0000305
+offset_top = 216.00003
+offset_right = 745.0
+offset_bottom = 383.00003
+rotation = -1.5635068
+scale = Vector2(0.32557034, 0.97702694)
+texture = ExtResource("11_lrrp4")
+
+[node name="IngredientLabel" type="Label" parent="UI/IngredientInfo" unique_id=447727503]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 18.0
+offset_top = -20.0
+offset_right = 62.0
+offset_bottom = 3.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Temp"
 
-[node name="Description" type="Label" parent="Control" unique_id=1833737355]
+[node name="IngredientDescription" type="Label" parent="UI/IngredientInfo" unique_id=1169376077]
 unique_name_in_owner = true
-visible = false
-custom_minimum_size = Vector2(120, 20)
+custom_minimum_size = Vector2(80, 26)
 layout_mode = 0
-offset_left = 64.0
-offset_top = 1.0
-offset_right = 184.0
-offset_bottom = 232.0
-theme_override_font_sizes/font_size = 10
+offset_left = 21.0
+offset_top = 9.0
+offset_right = 141.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 text = "A very long description with a decently lenghtly words"
 autowrap_mode = 2
 
-[node name="TextureRect" type="TextureRect" parent="." unique_id=87968641]
-layout_mode = 2
-expand_mode = 1
+[node name="CakeButtons" type="Control" parent="UI" unique_id=469045232]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
-[connection signal="mouse_entered" from="." to="." method="_on_mouse_entered"]
-[connection signal="mouse_exited" from="." to="." method="_on_mouse_exited"]
+[node name="Clear" type="Button" parent="UI/CakeButtons" unique_id=2144111640]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = 207.0
+offset_top = 340.0
+offset_right = 264.0
+offset_bottom = 371.0
+text = "CLEAR"
+
+[node name="Serve" type="Button" parent="UI/CakeButtons" unique_id=860132880]
+visible = false
+z_index = 2
+layout_mode = 0
+offset_left = 450.0
+offset_top = 414.0
+offset_right = 505.0
+offset_bottom = 445.0
+text = "SERVE"
+
+[node name="AudioManager" parent="." unique_id=1215231590 instance=ExtResource("12_d6vw7")]
+
+[connection signal="pressed" from="UI/CakeButtons/Clear" to="." method="_on_clear_pressed"]
+[connection signal="pressed" from="UI/CakeButtons/Serve" to="." method="_on_serve_pressed"]
