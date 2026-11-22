@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://bpqfxp1id6wdx" path="res://assets/cart/ingredient case.png" id="1_o16yv"]
 [ext_resource type="Texture2D" uid="uid://dji6e8uw5uxan" path="res://assets/ingredients/swamp_onion.png" id="2_0iuxh"]
-[ext_resource type="PackedScene" uid="uid://kydc2nxl6u3x" path="res://components/ingredient.tscn" id="2_upnje"]
+[ext_resource type="PackedScene" uid="uid://kydc2nxl6u3x" path="res://components/ingredient.tscn" id="2_6jvvf"]
 [ext_resource type="Texture2D" uid="uid://c7hj5rr6qmdah" path="res://assets/ingredients/clock egg.png" id="3_7rexv"]
 [ext_resource type="Texture2D" uid="uid://qocfa18quvo8" path="res://assets/ingredients/candy rose.png" id="4_6jvvf"]
 [ext_resource type="Texture2D" uid="uid://7x63ved8k54k" path="res://assets/ingredients/fruitful filling.png" id="4_fsie2"]
@@ -49,142 +49,37 @@ theme_override_constants/v_separation = 25
 columns = 3
 metadata/_edit_use_anchors_ = true
 
-[node name="Panel" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=431251583]
-custom_minimum_size = Vector2(90, 90)
+[node name="CandyRose" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=97654744 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
+ing_name = "Candy Rose"
+description = "Love, attraction, and desire are three very different things. These petals can produce all three."
+sprite = ExtResource("4_6jvvf")
 
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel" unique_id=1400910884]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("2_0iuxh")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel" unique_id=97654744 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel2" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1914644272]
-custom_minimum_size = Vector2(90, 90)
+[node name="ClockworkEgg" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=397521022 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
+ing_name = "Clockwork Egg"
+description = "Tick tock. Time and movement in a fragile shell. Crack it backwards, forwards, or crush it entirely."
+sprite = ExtResource("3_7rexv")
 
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel2" unique_id=1722180807]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_6jvvf")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel2" unique_id=1461354415 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel3" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=565945736]
-custom_minimum_size = Vector2(90, 90)
+[node name="FruitfulFilling" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1622123133 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
+ing_name = "Fruitful Filling"
+description = "A little becomes a lot. Whether you needed a lot is another matter."
+sprite = ExtResource("4_fsie2")
 
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel3" unique_id=342986574]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("6_6jvvf")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel3" unique_id=818488284 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel4" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=120290645]
-custom_minimum_size = Vector2(90, 90)
+[node name="MidnightHoney" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=626290864 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
+ing_name = "Midnight Honey"
+description = "Soothes even the most restless soul. Sometimes too thoroughly."
+sprite = ExtResource("5_0iuxh")
 
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel4" unique_id=340730956]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("5_0iuxh")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel4" unique_id=124832169 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="Panel5" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=416745940]
-custom_minimum_size = Vector2(90, 90)
+[node name="MirrorGlaze" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=832843012 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
+ing_name = "Mirror Glaze"
+description = "Mirror, mirrorDon’t stare too longEverything’s doubledYou might see something wrong"
+sprite = ExtResource("6_6jvvf")
 
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel5" unique_id=858860318]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("3_7rexv")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel5" unique_id=4969996 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-metadata/_edit_use_anchors_ = true
-
-[node name="Panel6" type="Panel" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1567791183]
-custom_minimum_size = Vector2(90, 90)
+[node name="Onion" parent="Container/Panel/MarginContainer/GridContainer2" unique_id=1575308956 instance=ExtResource("2_6jvvf")]
 layout_mode = 2
-
-[node name="TextureRect" type="TextureRect" parent="Container/Panel/MarginContainer/GridContainer2/Panel6" unique_id=2015128657]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("4_fsie2")
-expand_mode = 1
-stretch_mode = 5
-
-[node name="Ingredient" parent="Container/Panel/MarginContainer/GridContainer2/Panel6" unique_id=338437678 instance=ExtResource("2_upnje")]
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
+ing_name = "Onion"
+sprite = ExtResource("2_0iuxh")

@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://8epr18tyo8wa"]
 
 [ext_resource type="Texture2D" uid="uid://b2o2tim3yqo78" path="res://assets/cakes/cake base.png" id="1_hrrm1"]
+[ext_resource type="Script" uid="uid://dkaaagc5nce52" path="res://scripts/cake.gd" id="1_msnv4"]
 [ext_resource type="Texture2D" uid="uid://6ksaedft1kjn" path="res://assets/cakes/cake filling.png" id="2_msnv4"]
 [ext_resource type="Texture2D" uid="uid://c66leuxdrjbip" path="res://assets/cakes/cake glaze.png" id="3_pfbaa"]
 [ext_resource type="Texture2D" uid="uid://bo6l2yer7euc6" path="res://assets/cakes/cake honey.png" id="4_v8acl"]
@@ -9,23 +10,24 @@
 [ext_resource type="Texture2D" uid="uid://iwb455fbi6h4" path="res://assets/cakes/cake rose.png" id="7_k7jda"]
 
 [node name="Cake" type="Node2D" unique_id=540244130]
+script = ExtResource("1_msnv4")
 
 [node name="CakeBase" type="Sprite2D" parent="." unique_id=1906006847]
 texture = ExtResource("1_hrrm1")
 
-[node name="Filling" type="Sprite2D" parent="." unique_id=613704313]
+[node name="FruitfulFilling" type="Sprite2D" parent="." unique_id=613704313]
 visible = false
 texture = ExtResource("2_msnv4")
 
-[node name="Glaze" type="Sprite2D" parent="." unique_id=770823901]
+[node name="MirrorGlaze" type="Sprite2D" parent="." unique_id=770823901]
 visible = false
 texture = ExtResource("3_pfbaa")
 
-[node name="Honey" type="Sprite2D" parent="." unique_id=210629148]
+[node name="MidnightHoney" type="Sprite2D" parent="." unique_id=210629148]
 visible = false
 texture = ExtResource("4_v8acl")
 
-[node name="Egg" type="Sprite2D" parent="." unique_id=1676110898]
+[node name="ClockworkEgg" type="Sprite2D" parent="." unique_id=1676110898]
 visible = false
 texture = ExtResource("5_tjbhj")
 
@@ -33,6 +35,6 @@ texture = ExtResource("5_tjbhj")
 visible = false
 texture = ExtResource("6_2438w")
 
-[node name="Rose" type="Sprite2D" parent="." unique_id=311742856]
+[node name="CandyRose" type="Sprite2D" parent="." unique_id=311742856]
 visible = false
 texture = ExtResource("7_k7jda")

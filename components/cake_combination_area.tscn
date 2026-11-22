@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://dgbubht77hggb"]
+
+[ext_resource type="Script" uid="uid://c2x7h5j0f3722" path="res://scripts/cake_combination_area.gd" id="1_x3uy5"]
+
+[node name="CakeCombinationArea" type="PanelContainer" unique_id=678533443]
+modulate = Color(1, 1, 1, 0)
+self_modulate = Color(1, 1, 1, 0)
+mouse_filter = 1
+script = ExtResource("1_x3uy5")
