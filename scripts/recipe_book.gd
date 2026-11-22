@@ -9,10 +9,10 @@ const RECIPES = {
 		"correct_customer_id": 0
 	},
 	"candied_rose|onion": {
-		"correct_customer_id": 1
+		"correct_customer_id": 0
 	},
 	"clockwork_egg|onion": {
-		"correct_customer_id": 2
+		"correct_customer_id": 1
 	},
 	"fruitful_filling|onion": {
 		"correct_customer_id": 0
@@ -22,20 +22,20 @@ const RECIPES = {
 		"correct_customer_id": 0
 	},
 	"candied_rose|mirror_glaze": {
-		"correct_customer_id": 4
+		"correct_customer_id": 3
 	},
 	"clockwork_egg|mirror_glaze": {
 		"correct_customer_id": 0
 	},
 	"fruitful_filling|mirror_glaze": {
-		"correct_customer_id": 5
+		"correct_customer_id": 4
 	},
 	
 	"candied_rose|midnight_honey": {
-		"correct_customer_id": 7
+		"correct_customer_id": 6
 	},
 	"clockwork_egg|midnight_honey": {
-		"correct_customer_id": 3
+		"correct_customer_id": 2
 	},
 	"fruitful_filling|midnight_honey": {
 		"correct_customer_id": 0
@@ -49,6 +49,6 @@ const RECIPES = {
 		"correct_customer_id": 0
 	},
 	"clockwork_egg|fruitful_filling": {
-		"correct_customer_id": 6
+		"correct_customer_id": 5
 	}
 }

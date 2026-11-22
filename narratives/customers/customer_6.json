@@ -1,0 +1,30 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "What?"
+		},
+		{
+			"speaker": "Customer",
+			"text": "Someone keeps turning me down. I was hoping we could make a cake to change her mind."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Absolutely not. I’ll make something to improve your appeal, not disable her judgment. Though I appreciate the latter would be easier."
+		}
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "If this doesn’t work, come back. We’ll try something more drastic. Like making you a decent human being."
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "That one’s for regrets. Take it to your mother."
+		}
+	],
+}

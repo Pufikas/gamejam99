@@ -1,0 +1,38 @@
+{
+	"start": [
+		{
+			"speaker": "Fairy",
+			"text": "Looking is free, precious. An oversight I intend to correct."
+		},
+		{
+			"speaker": "Customer",
+			"text": "I want more than anyone else."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "More what?"
+		},
+		{
+			"speaker": "Customer",
+			"text": "Everything."
+		},
+		{
+			"speaker": "Fairy",
+			"text": "Alrighty then. Would you like to finish “overcompensating for…” on top, or shall we let people guess?"
+		},
+	],
+	
+	"good_result": [
+		{
+			"speaker": "Fairy",
+			"text": "When you own the whole village, keep me in mind. I could use a landlord who owes me a favor."
+		}
+	],
+	
+	"bad_result": [
+		{
+			"speaker": "Fairy",
+			"text": "Seems wanting something and not getting it might do you more good than the cake."
+		}
+	],
+}

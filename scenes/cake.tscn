@@ -35,6 +35,6 @@ texture = ExtResource("5_tjbhj")
 visible = false
 texture = ExtResource("6_2438w")
 
-[node name="CandyRose" type="Sprite2D" parent="." unique_id=311742856]
+[node name="CandiedRose" type="Sprite2D" parent="." unique_id=311742856]
 visible = false
 texture = ExtResource("7_k7jda")

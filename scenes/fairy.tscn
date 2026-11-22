@@ -37,11 +37,11 @@ animations = [{
 "speed": 24.0
 }, {
 "frames": [{
-"duration": 1.0,
-"texture": ExtResource("5_khp51")
+"duration": 240.0,
+"texture": ExtResource("4_onrb3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_onrb3")
+"texture": ExtResource("5_khp51")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_qcx4o")
@@ -60,8 +60,17 @@ animations = [{
 }, {
 "duration": 1.0,
 "texture": ExtResource("4_onrb3")
+}, {
+"duration": 78.0,
+"texture": ExtResource("1_wuxss")
+}, {
+"duration": 0.5,
+"texture": ExtResource("2_0jn54")
+}, {
+"duration": 2.0,
+"texture": ExtResource("3_60auo")
 }],
-"loop": 0,
+"loop": 1,
 "name": &"wing flick",
 "speed": 24.0
 }]
@@ -74,6 +83,5 @@ position = Vector2(0, -3.8146973e-06)
 scale = Vector2(0.484375, 0.4375)
 sprite_frames = SubResource("SpriteFrames_bhunq")
 animation = &"wing flick"
-autoplay = "idle"
-frame = 7
-frame_progress = 1.0
+autoplay = "wing flick"
+frame_progress = 0.22382465
