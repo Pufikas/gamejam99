@@ -13,7 +13,14 @@ config_version=5
 config/name="gamejam99"
 run/main_scene="uid://n8dj51jq1wjw"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+
+[audio]
+
+buses/default_bus_layout=""
+
+[autoload]
+
+AudioManager="*uid://clx5awy8d525t"
 
 [display]
 

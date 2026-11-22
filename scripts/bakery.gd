@@ -27,6 +27,7 @@ func _ready() -> void:
 	for ingredient in ingredients_panel.find_children("*", "IngredientPanel", true, false):
 		ingredient.ingredient_hover.connect(_on_ingredient_hovered)
 	
+	AudioManager.play_music(0)
 	_on_ingredients_changed(0)
 	spawn_customer()
 
@@ -58,14 +59,17 @@ func _on_customer_left():
 		customer.queue_free()
 	
 	customer = null
+	await get_tree().create_timer(4.0).timeout
 	spawn_customer()
 
 func _on_ingredient_hovered(ing_name: String, description: String) -> void:
 	%IngredientLabel.text = ing_name
 	%IngredientDescription.text = description
-	
 	#print("[DEBUG] hover ingredient: ", ing_name)
-	ingredient_info.show()
+	if ing_name == "" || description == "":
+		ingredient_info.visible = false
+	else:
+		ingredient_info.visible = true
 
 func _on_ingredients_changed(count: int) -> void:
 	#print("[DEBUG] (bakery) _on_ingredients_changed ", count)

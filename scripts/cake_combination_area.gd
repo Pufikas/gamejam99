@@ -1,12 +1,13 @@
 extends PanelContainer
 
+var select_sfx = preload("res://assets/audio/sfx/Selecting_an_ingredient.ogg")
+
 var selected_ingredients : Array[Dictionary] = []
 
 signal cake_served(recipe : Dictionary)
 signal ingredient_applied(ingredient : Dictionary)
 signal ingredients_changed(count : int)
 signal clear_cake_sprites()
-
 
 func _can_drop_data(_at_position: Vector2, data: Variant) -> bool:
 	return selected_ingredients.size() < 2
@@ -16,6 +17,7 @@ func _drop_data(_at_position: Vector2, data: Variant) -> void:
 
 	#print("[DEBUG] Added ingredient: ", data["name"])
 	ingredient_applied.emit(data)
+	AudioManager.play_sfx(select_sfx)
 	ingredients_changed.emit(selected_ingredients.size())
 	
 func get_recipe() -> Dictionary:
