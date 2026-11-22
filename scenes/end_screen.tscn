@@ -1,0 +1,50 @@
+[gd_scene format=3 uid="uid://bdafcbby1eox7"]
+
+[ext_resource type="Script" uid="uid://dlavaexqk8ecs" path="res://scripts/end_screen.gd" id="1_6e1uj"]
+[ext_resource type="Texture2D" uid="uid://cfet082saxsrw" path="res://icon.png" id="2_jc7ji"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_87vmq"]
+bg_color = Color(0.73414713, 1.4487356e-05, 0.4808668, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g44xs"]
+bg_color = Color(0.9647059, 0.4117647, 0.7372549, 1)
+
+[node name="EndScreen" type="Control" unique_id=1752836327]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_6e1uj")
+
+[node name="Label" type="Label" parent="." unique_id=825391030]
+layout_mode = 0
+offset_left = 466.0
+offset_top = 337.0
+offset_right = 598.0
+offset_bottom = 382.0
+theme_override_font_sizes/font_size = 32
+text = "The End!"
+
+[node name="Logo" type="TextureRect" parent="." unique_id=350063939]
+layout_mode = 0
+offset_left = 213.0
+offset_top = 2.0
+offset_right = 897.0
+offset_bottom = 309.0
+texture = ExtResource("2_jc7ji")
+
+[node name="Exit" type="Button" parent="." unique_id=321402188]
+layout_mode = 0
+offset_left = 491.0
+offset_top = 447.0
+offset_right = 571.0
+offset_bottom = 504.0
+theme_override_colors/font_color = Color(0.875, 0.875, 0.875, 1)
+theme_override_font_sizes/font_size = 35
+theme_override_styles/pressed = SubResource("StyleBoxFlat_87vmq")
+theme_override_styles/hover = SubResource("StyleBoxFlat_g44xs")
+text = "EXIT"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

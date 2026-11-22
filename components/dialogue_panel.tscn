@@ -39,7 +39,7 @@ anchor_bottom = 0.8622754
 grow_vertical = 2
 theme_override_colors/default_color = Color(0, 0, 0, 1)
 text = "Absolutely not. I’ll make something to improve your appeal, not disable her judgment. Though I appreciate the latter would be easier."
-autowrap_mode = 1
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Continue" type="Button" parent="TextureRect" unique_id=1544782088]
