@@ -34,7 +34,7 @@ func _ready() -> void:
 func spawn_customer():
 	if curr_customer_index >= customer_list.size():
 		print("No more customers!")
-		# game end
+		get_tree().change_scene_to_file("res://scenes/end_screen.tscn")
 		return
 	
 	var new_customer = customer_scene.instantiate()

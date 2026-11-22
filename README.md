@@ -8,6 +8,11 @@ Listen to their questionable wishes, decipher the clues in six peculiar ingredie
 
 Layers of cake for the mistakes you make!
 
+# How to play
+
+First, listen to what the customer wants.
+Second pick two ingredients, stack the layers, and serve their cake.
+
 # Contributers
 - [Pufikas](https://github.com/Pufikas) **code**
 - [Jujuancho127](https://github.com/Jujuancho127) **code**
