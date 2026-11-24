@@ -3,6 +3,7 @@ extends Node2D
 @export var customer_scene : PackedScene
 @export var customer_list : Array[CustomerData]
 @onready var customer_container : Node2D = $CustomerContainer
+@onready var get_hint_btn : Button = $UI/GetHintBtn
 
 @onready var dialogue_manager = %DialogueManager
 @onready var cake : Node2D = $Plate/Cake
@@ -95,3 +96,12 @@ func _on_serve_pressed() -> void:
 
 func _on_clear_pressed() -> void:
 	cake_combination_area.clear_combinations()
+
+func _on_get_hint_btn_pressed() -> void:
+	if dialogue_manager.is_playing:
+		dialogue_manager.end_dialogue()
+	
+	if !customer:
+		return
+	
+	dialogue_manager.start_dialogue(customer.get_dialogue_path(), "hint")

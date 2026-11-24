@@ -3,6 +3,8 @@
 [ext_resource type="Script" uid="uid://64cb7tm7fef" path="res://scripts/bakery.gd" id="1_lcg4g"]
 [ext_resource type="PackedScene" uid="uid://cfsrfy7efauky" path="res://scenes/fairy.tscn" id="2_hpt4t"]
 [ext_resource type="Texture2D" uid="uid://c6sg7j5l3gom" path="res://assets/cart/fairy baker cart.png" id="2_roruw"]
+[ext_resource type="Script" uid="uid://cbitb70v3yrl7" path="res://scripts/customer_resource.gd" id="3_20d28"]
+[ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
 [ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="3_i37qs"]
 [ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="4_dqu5t"]
 [ext_resource type="Resource" uid="uid://bwcxrd7oy5xgt" path="res://resources/murderman.tres" id="4_s1llo"]
@@ -14,26 +16,12 @@
 [ext_resource type="PackedScene" uid="uid://dgbubht77hggb" path="res://components/cake_combination_area.tscn" id="8_roruw"]
 [ext_resource type="PackedScene" uid="uid://b7fum8u3nsex0" path="res://components/ingredients_panel.tscn" id="9_gg4h7"]
 [ext_resource type="Texture2D" uid="uid://bx5slmh7mqnbt" path="res://assets/ui/dialogue box.png" id="16_0pi5m"]
-[ext_resource type="PackedScene" path="res://scenes/audio_manager.tscn" id="17_81f7g"]
+[ext_resource type="PackedScene" uid="uid://clx5awy8d525t" path="res://scenes/audio_manager.tscn" id="17_81f7g"]
 
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
 customer_scene = ExtResource("3_d2ae8")
 customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("4_s1llo"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("4_s1llo")])
-
-[node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_right = 1152.0
-offset_bottom = 648.0
-grow_horizontal = 2
-grow_vertical = 2
-size_flags_horizontal = 4
-size_flags_vertical = 4
-texture = ExtResource("7_1wtg2")
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
 anchors_preset = 8
@@ -55,7 +43,7 @@ texture = ExtResource("2_roruw")
 
 [node name="CustomerContainer" type="Node2D" parent="." unique_id=12494524]
 z_index = 1
-position = Vector2(130, 510)
+position = Vector2(111, 520)
 
 [node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("2_hpt4t")]
 position = Vector2(581.00006, 280)
@@ -77,16 +65,16 @@ script = ExtResource("6_d2ae8")
 position = Vector2(657, 151)
 
 [node name="Plate" type="Sprite2D" parent="." unique_id=588496257]
-position = Vector2(410, 307)
+position = Vector2(394, 307)
 texture = ExtResource("3_i37qs")
 
 [node name="Cake" parent="Plate" unique_id=540244130 instance=ExtResource("4_dqu5t")]
 
 [node name="CakeCombinationArea" parent="." unique_id=1872399338 instance=ExtResource("8_roruw")]
 custom_minimum_size = Vector2(22, 22)
-offset_left = 305.0
+offset_left = 285.0
 offset_top = 247.0
-offset_right = 327.0
+offset_right = 307.0
 offset_bottom = 269.0
 scale = Vector2(9.898881, 5.7587643)
 
@@ -138,6 +126,7 @@ text = "A very long description with a decently lenghtly words"
 autowrap_mode = 2
 
 [node name="CakeButtons" type="Control" parent="UI" unique_id=469045232]
+z_index = 2
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -145,7 +134,6 @@ offset_bottom = 40.0
 
 [node name="Clear" type="Button" parent="UI/CakeButtons" unique_id=2144111640]
 visible = false
-z_index = 2
 layout_mode = 0
 offset_left = 207.0
 offset_top = 340.0
@@ -155,7 +143,6 @@ text = "CLEAR"
 
 [node name="Serve" type="Button" parent="UI/CakeButtons" unique_id=860132880]
 visible = false
-z_index = 2
 layout_mode = 0
 offset_left = 450.0
 offset_top = 414.0
@@ -163,7 +150,15 @@ offset_right = 505.0
 offset_bottom = 445.0
 text = "SERVE"
 
+[node name="GetHintBtn" type="Button" parent="UI" unique_id=1381029582]
+offset_left = 842.0
+offset_top = 126.0
+offset_right = 942.0
+offset_bottom = 157.0
+text = "SHOW HINT"
+
 [node name="AudioManager" parent="." unique_id=1215231590 instance=ExtResource("17_81f7g")]
 
 [connection signal="pressed" from="UI/CakeButtons/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="UI/CakeButtons/Serve" to="." method="_on_serve_pressed"]
+[connection signal="pressed" from="UI/GetHintBtn" to="." method="_on_get_hint_btn_pressed"]

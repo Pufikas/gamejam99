@@ -26,5 +26,12 @@
 			"speaker": "Fairy",
 			"text": "Wrong cake. Though trying someone else’s seems to be your thing."
 		}
+	],
+	
+	"hint": [
+		{
+			"speaker": "Fairy",
+			"text": "Something to peel away his attachment, something to help a new one bloom."
+		}
 	]
 }
