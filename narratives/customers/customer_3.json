@@ -31,4 +31,11 @@
 			"text": "Shall I get you a mirror?"
 		}
 	],
+	
+	"hint": [
+		{
+			"speaker": "Fairy",
+			"text": "She needs to be attracted to her own reflection."
+		}
+	]
 }

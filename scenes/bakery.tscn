@@ -21,7 +21,7 @@
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
 customer_scene = ExtResource("3_d2ae8")
-customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2")])
+customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("4_s1llo"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("4_s1llo")])
 
 [node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
 anchors_preset = 8
@@ -150,7 +150,15 @@ offset_right = 505.0
 offset_bottom = 445.0
 text = "SERVE"
 
+[node name="GetHintBtn" type="Button" parent="UI" unique_id=1381029582]
+offset_left = 842.0
+offset_top = 126.0
+offset_right = 942.0
+offset_bottom = 157.0
+text = "SHOW HINT"
+
 [node name="AudioManager" parent="." unique_id=1215231590 instance=ExtResource("17_81f7g")]
 
 [connection signal="pressed" from="UI/CakeButtons/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="UI/CakeButtons/Serve" to="." method="_on_serve_pressed"]
+[connection signal="pressed" from="UI/GetHintBtn" to="." method="_on_get_hint_btn_pressed"]

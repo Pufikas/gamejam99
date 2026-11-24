@@ -11,7 +11,6 @@ var correct_sfx = preload("res://assets/audio/sfx/Correct.mp3")
 #var wrong_sfx = preload("res://assets/audio/sfx/Buzzer.wav")
 
 var dialogue_manager : Node
-
 var customer_id : int
 
 signal customer_arrived
@@ -63,7 +62,7 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 func receive_cake(recipe: Dictionary):
 	var correct = recipe.get("correct_customer_id") == customer_id
 	var sequence = "bad_result"
-
+	
 	if correct:
 		sequence = "good_result"
 		AudioManager.play_sfx(correct_sfx)

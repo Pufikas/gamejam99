@@ -26,5 +26,12 @@
 			"speaker": "Fairy",
 			"text": "That one grants the baker’s wishes. Don’t eat that, sweetie. I’ve spent all morning wishing everyone would drop dead."
 		}
+	],
+	
+	"hint": [
+		{
+			"speaker": "Fairy",
+			"text": "Something to quickly shed unwanted layers."
+		}
 	]
 }
