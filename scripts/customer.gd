@@ -4,6 +4,12 @@ extends Node2D
 
 @onready var sprite : Sprite2D = $Sprite2D
 @onready var click_area : Area2D = $Area2D
+
+var footstep_sfx = preload("res://assets/audio/sfx/Footsteps_on_concrete.wav")
+var doorbell_sfx = preload("res://assets/audio/sfx/Doorbell.wav")
+var correct_sfx = preload("res://assets/audio/sfx/Correct.mp3")
+#var wrong_sfx = preload("res://assets/audio/sfx/Buzzer.wav")
+
 var dialogue_manager : Node
 
 var customer_id : int
@@ -26,7 +32,27 @@ func get_dialogue_path() -> String:
 
 func enter_bakery(): # should not start a dialogue immediately, only to show that there is a new customer arrived
 	show()
-	customer_arrived.emit() 
+	modulate.a = 0.0
+	AudioManager.play_sfx(doorbell_sfx)
+	AudioManager.play_sfx(footstep_sfx)
+	
+	# fade in (4s since the sfx is 4s)
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 1.0, 4)
+	await tween.finished
+	
+	customer_arrived.emit()
+
+func leave_bakery():
+	AudioManager.play_sfx(footstep_sfx)
+	
+	var tween = create_tween()
+	tween.tween_property(self, "modulate:a", 0.0, 4)
+	
+	await tween.finished
+	
+	hide()
+	customer_left.emit()
 
 func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int) -> void:
 	if event is InputEventMouseButton:
@@ -35,12 +61,18 @@ func _on_area_2d_input_event(_viewport: Node, event: InputEvent, _shape_idx: int
 			print("DEBUG, customer area clicked")
 
 func receive_cake(recipe: Dictionary):
+	var correct = recipe.get("correct_customer_id") == customer_id
 	var sequence = "bad_result"
-	
-	if (recipe.get("correct_customer_id") == customer_id):
+
+	if correct:
 		sequence = "good_result"
-		customer_left.emit()
-		#await get_tree().create_timer(randf_range(1.0, 5.0)).timeout
+		AudioManager.play_sfx(correct_sfx)
+	#else:
+	#	AudioManager.play_sfx(wrong_sfx)
 	
+	# wait for dialogue to finish, then the customer should leave
 	dialogue_manager.start_dialogue(get_dialogue_path(), sequence)
-	print("[DEBUG] receive cake in customer: ", recipe.get("correct_customer_id"))
+	await dialogue_manager.dialogue_finished
+	
+	if correct:
+		leave_bakery()

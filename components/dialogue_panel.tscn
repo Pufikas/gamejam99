@@ -29,16 +29,17 @@ theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Fairy"
 metadata/_edit_use_anchors_ = true
 
-[node name="Dialogue" type="Label" parent="TextureRect" unique_id=170708246]
+[node name="Dialogue" type="RichTextLabel" parent="TextureRect" unique_id=562488794]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.06382979
-anchor_top = 0.4790419
-anchor_right = 0.7034575
-anchor_bottom = 0.61676645
+anchor_top = 0.37724552
+anchor_right = 0.83776593
+anchor_bottom = 0.8622754
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-text = "Welcome, I guess. What personal failing are we frosting today?"
+theme_override_colors/default_color = Color(0, 0, 0, 1)
+text = "Absolutely not. I’ll make something to improve your appeal, not disable her judgment. Though I appreciate the latter would be easier."
+autowrap_mode = 2
 metadata/_edit_use_anchors_ = true
 
 [node name="Continue" type="Button" parent="TextureRect" unique_id=1544782088]

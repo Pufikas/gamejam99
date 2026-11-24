@@ -7,27 +7,46 @@
 [ext_resource type="PackedScene" uid="uid://cvxptm2lddksj" path="res://components/customer.tscn" id="3_d2ae8"]
 [ext_resource type="Texture2D" uid="uid://byhuu0ganen8r" path="res://assets/cart/plate.png" id="3_i37qs"]
 [ext_resource type="PackedScene" uid="uid://8epr18tyo8wa" path="res://scenes/cake.tscn" id="4_dqu5t"]
-[ext_resource type="Resource" uid="uid://d1e2s4cnimjn2" path="res://resources/customer_0.tres" id="4_s1llo"]
-[ext_resource type="Resource" uid="uid://dgloy4kutrh1j" path="res://resources/customer_1.tres" id="5_1wtg2"]
+[ext_resource type="Resource" uid="uid://bwcxrd7oy5xgt" path="res://resources/murderman.tres" id="4_s1llo"]
+[ext_resource type="Resource" uid="uid://ven7a4ve225l" path="res://resources/spousethief.tres" id="5_1wtg2"]
 [ext_resource type="PackedScene" uid="uid://b776rbyhwhj4p" path="res://components/dialogue_panel.tscn" id="5_gfx47"]
+[ext_resource type="Resource" uid="uid://cbc4jau13ncam" path="res://resources/weightloss.tres" id="6_0pi5m"]
 [ext_resource type="Script" uid="uid://dtphnt6tr0aoa" path="res://scripts/dialogue_manager.gd" id="6_d2ae8"]
+[ext_resource type="Texture2D" uid="uid://8nhfexokpe0t" path="res://assets/backdrop/backdrop.png" id="7_1wtg2"]
 [ext_resource type="PackedScene" uid="uid://dgbubht77hggb" path="res://components/cake_combination_area.tscn" id="8_roruw"]
 [ext_resource type="PackedScene" uid="uid://b7fum8u3nsex0" path="res://components/ingredients_panel.tscn" id="9_gg4h7"]
+[ext_resource type="Texture2D" uid="uid://bx5slmh7mqnbt" path="res://assets/ui/dialogue box.png" id="16_0pi5m"]
+[ext_resource type="PackedScene" uid="uid://clx5awy8d525t" path="res://scenes/audio_manager.tscn" id="17_81f7g"]
 
 [node name="Bakery" type="Node2D" unique_id=1580627570]
 script = ExtResource("1_lcg4g")
 customer_scene = ExtResource("3_d2ae8")
-customer_list = Array[ExtResource("3_20d28")]([ExtResource("4_s1llo"), ExtResource("5_1wtg2")])
+customer_list = Array[ExtResource("3_20d28")]([ExtResource("5_1wtg2"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2"), ExtResource("4_s1llo"), ExtResource("6_0pi5m"), ExtResource("6_0pi5m"), ExtResource("5_1wtg2")])
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1388327704]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_right = 1152.0
+offset_bottom = 648.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("7_1wtg2")
 
 [node name="Stall" type="Sprite2D" parent="." unique_id=4041187]
 position = Vector2(550, 324)
 texture = ExtResource("2_roruw")
 
 [node name="CustomerContainer" type="Node2D" parent="." unique_id=12494524]
-position = Vector2(195, 472)
+z_index = 1
+position = Vector2(111, 520)
 
 [node name="Fairy" parent="." unique_id=1505864144 instance=ExtResource("2_hpt4t")]
-position = Vector2(572, 347)
+position = Vector2(581.00006, 280)
 
 [node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=958973872]
 
@@ -62,35 +81,52 @@ scale = Vector2(9.898881, 5.7587643)
 [node name="UI" type="Node" parent="." unique_id=833427010]
 
 [node name="IngredientInfo" type="Control" parent="UI" unique_id=511917445]
+visible = false
 layout_mode = 3
 anchors_preset = 0
-offset_top = 142.0
-offset_bottom = 142.0
+offset_left = 5.0
+offset_top = 38.0
+offset_right = 5.0
+offset_bottom = 38.0
+
+[node name="IngredientBackground" type="TextureRect" parent="UI/IngredientInfo" unique_id=1757434077]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = -7.0000305
+offset_top = 216.00003
+offset_right = 745.0
+offset_bottom = 383.00003
+rotation = -1.5635068
+scale = Vector2(0.32557034, 0.97702694)
+texture = ExtResource("16_0pi5m")
 
 [node name="IngredientLabel" type="Label" parent="UI/IngredientInfo" unique_id=447727503]
 unique_name_in_owner = true
 layout_mode = 0
-offset_left = 10.0
-offset_top = -25.0
-offset_right = 54.0
-offset_bottom = -2.0
+offset_left = 18.0
+offset_top = -20.0
+offset_right = 62.0
+offset_bottom = 3.0
 size_flags_horizontal = 4
 size_flags_vertical = 0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
 text = "Temp"
 
 [node name="IngredientDescription" type="Label" parent="UI/IngredientInfo" unique_id=1169376077]
 unique_name_in_owner = true
 custom_minimum_size = Vector2(80, 26)
 layout_mode = 0
-offset_left = 17.0
-offset_top = 1.0
-offset_right = 137.0
-offset_bottom = 232.0
-theme_override_font_sizes/font_size = 10
+offset_left = 21.0
+offset_top = 9.0
+offset_right = 141.0
+offset_bottom = 240.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 12
 text = "A very long description with a decently lenghtly words"
 autowrap_mode = 2
 
 [node name="CakeButtons" type="Control" parent="UI" unique_id=469045232]
+z_index = 2
 layout_mode = 3
 anchors_preset = 0
 offset_right = 40.0
@@ -113,6 +149,8 @@ offset_top = 414.0
 offset_right = 505.0
 offset_bottom = 445.0
 text = "SERVE"
+
+[node name="AudioManager" parent="." unique_id=1215231590 instance=ExtResource("17_81f7g")]
 
 [connection signal="pressed" from="UI/CakeButtons/Clear" to="." method="_on_clear_pressed"]
 [connection signal="pressed" from="UI/CakeButtons/Serve" to="." method="_on_serve_pressed"]
